@@ -10,7 +10,9 @@ require("dotenv").config
 
 
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+    origin : "*"
+}))
 const PORT=process.env.PORT || 8080
 
 app.get("/",(req,res)=>{
